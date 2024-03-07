@@ -34,11 +34,11 @@ class 이순신주식회사{
 }
 
 class 사람{
-    public void 나이() {
-
-    }
+    int 나이;
+    public 팔 a왼팔;
 }
 
 class 팔{
-
+    int 길이 = 100;
 }
+
