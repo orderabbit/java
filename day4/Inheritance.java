@@ -16,8 +16,6 @@ public class Inheritance {
         Cat c1 = new Cat();
         c1.meow();
         c1.breathe();
-
-
     }
 }
 
