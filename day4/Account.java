@@ -2,6 +2,7 @@ package day4;
 
 public class Account {
     int remainder = 0; // 잔액
+
     public void deposit(int depositMoney) {
         remainder += depositMoney;
         System.out.println(depositMoney + "원을 예금했습니다.");
