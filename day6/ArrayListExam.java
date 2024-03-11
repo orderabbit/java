@@ -1,51 +1,58 @@
 package day6;
-
 import java.util.ArrayList;
 
+// {5,4,3,2,1,0}을 ArrayList에 추가 해주세요.
+// ArrayList의 사이즈를 출력해주세요.
+// ArrayList의 3,4번째 값을 읽어서 출력해주세요. (인덱스 X, 1부터 )
+// 1,2번째 값을 지운 뒤, 다시 3,4번째 값을 출력해주세요
+// List의 모든 값을 출력해주세요.
 public class ArrayListExam {
     public static void main(String[] args) {
-        // 배열의 단점
+        ArrayList<Integer> list = new ArrayList<>();
+        // 정수를 저장할 수 있는 ArrayList를 선언하고 만들어주세요.
+        list.add(5);
+        list.add(4);
+        list.add(3);
+        list.add(2);
+        list.add(1);
+        list.add(0);
+        // 리스트에 값을 추가해주세요.
 
-        int[] arr = new int[1000];
 
-        arr[0] = 10; // 0번째 인덱스 사용
-        arr[10] = 100; // 10번째 인덱스 사용
+        // size()
+        // 리스트의 사이즈를 출력해주시고, 값이 6이 맞다면 계속 진행해주세요.
+        System.out.println(list.size());
+        // 출력결과 : 6
 
-        // 배열은 크기가 고정이라 유연하지 못함.
 
-        // 동적배열 -> 길이를 정하지 않고 유동적으로 변하게 함.
-        // 동적배열(ArrayList)은 객체만 저장 가능
+        // get()
+        // 리스트의 3,4번째 값을 출력해주세요.
+        int rst = list.get(2);
+        int rst2 = list.get(3);
+        System.out.println(rst);
+        System.out.println(rst2);
+        // 출력결과 : 3, 2
 
-        // 원시타입 -> int. double, boolean
-        // 원시타입을 제외한 자바의 모든 것은 객체다.
-        // 원시타입의 객체타입 존재.
-        // int -> Integer, double -> Double, boolean -> Boolean
-        ArrayList<Integer> list = new ArrayList<>(); // int ArrayList
 
-        list.add(10); // 0번째 인덱스에 10을 추가
-        list.add(20); // 1번째 인덱스에 20을 추가
-        list.add(30); // 2번째 인덱스에 30을 추가
 
-        int rst = list.get(1); // 1번째 인덱스 값을 가져옴
-        System.out.println(rst); // 20
+        // remove()
+        // 리스트의 1,2번째 값을 지운 뒤, 다시 3,4번째 값을 출력해주시고 어떤 변화가 있는지 체크해주세요.
+        list.remove(0);
+        list.remove(0);
+        int rst3 = list.get(2);
+        int rst4 = list.get(3);
+        System.out.println(rst3);
+        System.out.println(rst4);
+        // 출력 결과 : 1, 0
 
-        // 값 삭제하기
 
-        list.remove(1); // 1번째 인덱스의 값을 삭제. 값이 지워진 인덱스는 이후 값들로 땡겨진다.
-        System.out.println(list.get(1)); // 30
-        //System.out.println(list.get(2)); // remove 후 2번째 인덱스는 없어짐. -> 에러
-
-        // ArrayList의 크기 확인
-        int size = list.size();
-        System.out.println(size); // 2
-
-        // ArrayList의 모든 값 출력
-        // 마지막 인덱스는 항상 개수 - 1
+        // 반복문으로 출력.
+        //
+        // 리스트의 모든 값을 출력해주세요.
         for(int i = 0; i < list.size(); i++){
             System.out.println(list.get(i));
         }
-
+        // 출력 결과 : 3, 2, 1, 0
 
     }
-
 }
