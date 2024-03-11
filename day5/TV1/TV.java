@@ -30,7 +30,7 @@ class 삼성TV extends 표준TV{
     }
 }
 
-class LGTV extends 표준TV{
+class LGTV extends 표준TV{ // default 접근제어자
     public void 켜기(){
         System.out.println("LGTV 켜집니다.");
     }
